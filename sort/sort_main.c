@@ -148,6 +148,7 @@ int main(int argc, char* argv[]) {
 		for (size_t j = 0; j < size; ++j)
 			sortingArray[i][j] = dataset[j];
 	}
+	free(dataset);
 
 	//Create timers
 	clock_t clockCycles;
@@ -172,4 +173,6 @@ int main(int argc, char* argv[]) {
 	for (size_t i = 0; i < NUM_ALGORITHMS; ++i) {
 		free(sortingArray[i]);
 	}
+
+	return EXIT_SUCCESS;
 }
